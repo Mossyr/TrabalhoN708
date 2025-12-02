@@ -1,6 +1,6 @@
 # ♻️ PROJETO DOAMAIS: CONECTANDO DOADORES E DONATÁRIOS
 
-[cite_start]**Equipe 49:** Moacir Cadmiel, Rangel Amaral, João Pedro, Paulo Ricardo [cite: 232, 237, 238]
+[cite_start]**Equipe 36:** Moacir Cadmiel, Rangel Amaral, João Pedro, Paulo Ricardo [cite: 232, 237, 238]
 
 [cite_start]O DoaMais é uma plataforma multiplataforma desenvolvida para conectar pessoas que desejam doar itens em bom estado com aquelas que precisam, promovendo a reutilização e combatendo o descarte irregular na cidade de Fortaleza, Ceará[cite: 241]. [cite_start]O projeto está alinhado ao ODS 11: Cidades e Comunidades Sustentáveis[cite: 37, 242].
 
@@ -68,4 +68,5 @@ O sistema foi implementado como uma **Aplicação Web Responsiva** que suporta o
 * Moacir Cadmiel Silva dos Santos (Matrícula: 2318038)
 * Rangel Amaral Ferreira (Matrícula: 2327067)
 * João Pedro Pereira Alves (Matrícula: 2326205)
+
 * Paulo Ricardo de Castro Sousa (Matrícula: 2326189)
