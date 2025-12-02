@@ -1,0 +1,256 @@
+/* ARQUIVO: frontend/web/assets/css/profile.css (WOW Edition - Final) */
+
+/* Importar uma fonte legal do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset básico (opcional, mas ajuda a manter a consistência) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Body (Ajusta a fonte para a Poppins) */
+body {
+    font-family: 'Poppins', sans-serif; /* Usando a nova fonte */
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ------------------------------------------- */
+/* NOVOS ESTILOS PARA NAVEGAÇÃO (VOLTAR/SAIR)  */
+/* ------------------------------------------- */
+
+/* Estilo geral para todos os links de navegação no cabeçalho (que estão em home.css) */
+.main-header .nav-links a,
+.main-header .back-link {
+    color: var(--color-text-light); /* Cor branca/clara */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px; /* Aumenta a área clicável */
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+/* Estilo específico para o botão Voltar */
+.main-header .back-link {
+    /* Define o estilo de link, mas com um fundo sutil no hover */
+    background-color: transparent; 
+    border: 1px solid transparent; 
+}
+.main-header .back-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil ao passar o mouse */
+    border-color: rgba(255, 255, 255, 0.3); /* Borda sutil */
+}
+
+/* Estilo específico para o botão Sair/Meu Perfil (no nav-links) */
+.main-header .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Fundo sutil ao passar o mouse */
+}
+
+
+/* --- Conteúdo Principal do Perfil --- */
+.profile-page {
+    max-width: 900px; 
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.profile-container {
+    background: var(--color-text-light);
+    border-radius: 12px;
+    box-shadow: var(--shadow); 
+    padding: 40px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    gap: 30px; 
+}
+
+/* --- Seção de Informações do Perfil --- */
+.profile-info {
+    text-align: center;
+    width: 100%;
+    max-width: 400px; 
+}
+
+.profile-picture {
+    width: 120px; 
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid var(--color-primary); 
+    box-shadow: 0 0 0 6px rgba(40, 167, 69, 0.2); 
+    transition: transform 0.3s ease-in-out;
+}
+.profile-picture:hover {
+    transform: scale(1.05);
+}
+
+.profile-info h2 {
+    color: var(--color-text-dark);
+    margin-bottom: 8px; 
+    font-size: 2em; 
+    font-weight: 700;
+}
+
+.profile-info p {
+    color: #6c757d;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* --- Estatísticas do Usuário --- */
+.user-stats {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 35px; 
+    font-size: 1em;
+    padding: 15px 0;
+    border-top: 1px dashed #e9ecef; 
+    border-bottom: 1px dashed #e9ecef;
+    width: 100%;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #495057;
+    font-weight: 500;
+}
+
+.stat b {
+    color: var(--color-secondary); 
+    font-size: 1.4em; 
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+/* Botão de Edição */
+.edit-btn {
+    background-color: var(--color-secondary); 
+    width: auto;
+    padding: 12px 30px; 
+    border-radius: 8px;
+    margin-top: 30px; 
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.edit-btn:hover {
+    background-color: #0069d9;
+    transform: translateY(-2px);
+}
+
+/* --- Seção de Minhas Doações --- */
+.user-listings {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.user-listings h3 {
+    color: var(--color-text-dark); 
+    font-size: 1.8em;
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-primary); 
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#my-donations-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px; 
+}
+
+/* Estilo para cada card de doação pequena na lista do perfil */
+.donation-card-small {
+    background-color: #fefefe;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.donation-card-small:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.donation-card-small p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: #495057;
+}
+
+.donation-card-small b {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.donation-card-small a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.donation-card-small a:hover {
+    background-color: #218838;
+}
+
+/* Mensagem de loading */
+.loading-state, .error-message {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2em;
+    color: #6c757d;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .profile-page {
+        margin: 0;
+        padding: 0;
+    }
+    .profile-container {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 20px;
+        gap: 20px;
+    }
+    /* Ajustes para a navegação mobile no header (que vem do home.css) */
+    .main-header .back-link {
+        /* Garante que o voltar fique visível no mobile */
+        font-size: 1.1em;
+    }
+    .user-stats {
+        flex-direction: column; 
+        gap: 15px;
+    }
+    .user-listings h3 {
+        font-size: 1.5em;
+    }
+    #my-donations-list {
+        grid-template-columns: 1fr; 
+    }
+}

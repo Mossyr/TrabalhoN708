@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoaMais - Publicar Item</title>
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <link rel="stylesheet" href="assets/css/publish.css"> 
+</head>
+<body>
+    <div class="container">
+        <a href="home.html" class="back-link">&lt; Voltar para Home</a>
+        <h1>Publicar Novo Item para Doação</h1>
+        <form id="publish-form" enctype="multipart/form-data"> 
+            
+            <div class="form-group">
+                <label for="title">Título do Item</label>
+                <input type="text" id="title" required placeholder="Ex: Bicicleta Usada em Bom Estado">
+            </div>
+            
+            <div class="form-group">
+                <label for="description">Descrição Detalhada</label>
+                <textarea id="description" required placeholder="Cor, estado de conservação, por que está doando."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="category">Categoria</label>
+                <select id="category" required>
+                    <option value="">Selecione a Categoria</option>
+                    <option value="moveis">Móveis</option>
+                    <option value="roupas">Roupas e Calçados</option>
+                    <option value="eletronicos">Eletrônicos</option>
+                    <option value="livros">Livros e Mídias</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="image">Fotos do Item (Máx. 2)</label>
+                <input type="file" id="image" name="images" accept="image/*" multiple required>
+                <small>Formatos aceitos: JPG, PNG. Tamanho máximo: 5MB.</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="location">Localização (Bairro/Ponto de Referência)</label>
+                <input type="text" id="location" required placeholder="Ex: Conjunto Ceará, próximo ao Mercadinho Dois Irmãos">
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Telefone / WhatsApp</label>
+                <input type="tel" id="contact" required placeholder="(85) 9XXXX-XXXX">
+                <small>Seu contato será compartilhado apenas com o interessado após o "match".</small>
+            </div>
+
+            <button type="submit" class="primary-btn">Publicar Doação</button>
+        </form>
+        <p id="publish-message" class="error-message"></p>
+    </div>
+    <script src="assets/js/publish.js"></script>
+</body>
+</html>

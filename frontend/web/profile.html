@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoaMais - Meu Perfil</title>
+    <link rel="stylesheet" href="assets/css/profile.css"> </head>
+<body>
+    <header class="main-header">
+        <a href="home.html" class="back-link nav-item">&lt; Voltar</a>
+        <h1 class="logo">Meu Perfil</h1>
+        <div class="nav-links">
+            <a href="#" id="logout-button" class="nav-item">Sair</a>
+        </div>
+    </header>
+    <main class="main-content profile-page">
+        <div class="container profile-container">
+            <div id="loading-profile" class="loading-state">Carregando dados do usuário...</div>
+            <div id="profile-content" style="display: none;">
+                <div class="profile-info">
+                    <img src="https://placehold.co/120x120/E0F7FA/000000?text=Usu%C3%A1rio" alt="Foto do Usuário" class="profile-picture">
+                    <h2 id="profile-name"></h2>
+                    <p id="profile-email"></p>
+                    <div class="user-stats">
+                        <span class="stat">Doações Feitas: <b id="donations-count">0</b></span>
+                        <span class="stat">Reputação: <b id="reputation-score">5.0</b>/5.0</span>
+                    </div>
+                    <button class="primary-btn edit-btn">Editar Perfil</button>
+                </div>
+
+                <section class="user-listings">
+                    <h3>Minhas Doações Ativas</h3>
+                    <div id="my-donations-list">
+                        <p>Nenhuma doação ativa.</p>
+                    </div>
+                </section>
+            </div>
+            
+        </div>
+    </main>
+    <script src="assets/js/profile.js"></script>
+</body>
+</html>

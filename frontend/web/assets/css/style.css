@@ -1,0 +1,116 @@
+/* ARQUIVO: frontend/web/assets/css/style.css (FINAL E RESPONSIVO) */
+
+/* Paleta de Cores: Verde (Sustentabilidade/Ação) e Azul (Confiança/Comunidade) */
+:root {
+    --color-primary: #28a745; /* Verde DoaMais */
+    --color-secondary: #007BFF; /* Azul Confiança */
+    --color-background: #f8f9fa;
+    --color-text-dark: #343a40;
+    --color-text-light: #fff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    margin: 0;
+    /* Centraliza o conteúdo (usado para Login/Register containers) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza verticalmente */
+    min-height: 100vh;
+}
+
+/* Containers Centrais (Login/Register) */
+.container {
+    background: var(--color-text-light);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 450px;
+    /* Removido margin-top: 50px para centralizar melhor */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+.container h1 {
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Formulário e Inputs */
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], textarea, select, input[type="url"], input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+input:focus, textarea:focus, select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+/* Botões */
+.primary-btn {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+.primary-btn:hover {
+    background-color: #218838;
+}
+
+/* Mensagens */
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+}
+.link-secondary {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 500;
+}
+.link-secondary:hover {
+    text-decoration: underline;
+}
+.back-link {
+    display: inline-block;
+    color: var(--color-secondary);
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+/* --- RESPONSIVIDADE GERAL (Ajuste para Mobile) --- */
+@media (max-width: 500px) {
+    /* O container de Login/Register não fica colado nas laterais */
+    .container {
+        padding: 20px; /* Reduz o padding interno no mobile */
+        margin: 20px; /* Adiciona margem externa para não colar nas bordas da tela */
+        box-shadow: none; /* Remove a sombra no mobile para um visual mais limpo */
+        border: 1px solid #eee; /* Adiciona uma borda leve para separar */
+        max-width: 95%; /* Garante que ele não ocupe 100% da tela em todos os dispositivos */
+    }
+}

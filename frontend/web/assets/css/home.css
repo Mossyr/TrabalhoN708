@@ -1,0 +1,164 @@
+/* ARQUIVO: frontend/web/assets/css/home.css (REFATORADO COMPLETO) */
+
+:root {
+    --color-primary: #4CAF50; /* Verde fresco */
+    --color-secondary: #2196F3; /* Azul vibrante */
+    --color-background: #FAFAFA;
+    --color-text-dark: #333;
+    --color-text-light: #FFF;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+    --border-radius: 12px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background-color: var(--color-secondary);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    color: var(--color-text-light);
+}
+
+.logo {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.search-bar-desktop input, .search-bar-mobile input {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    width: 300px;
+    transition: width 0.3s;
+}
+
+.search-bar-desktop input:focus, .search-bar-mobile input:focus {
+    width: 350px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.donations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.donation-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.donation-card:hover {
+    transform: translateY(-5px);
+}
+
+.donation-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.donation-card h3 {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.donation-card p {
+    padding: 0 10px 10px;
+    font-size: 0.9em;
+}
+
+.primary-btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--color-primary);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.floating-button:hover {
+    background: #388E3C;
+}
+
+@media (max-width: 768px) {
+    .search-bar-desktop {
+        display: none;
+    }
+    .search-bar-mobile {
+        display: block;
+        padding: 10px 20px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: var(--color-secondary);
+        width: 100%;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+}

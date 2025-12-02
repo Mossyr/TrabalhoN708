@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoaMais - Itens Disponíveis</title>
+    <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="logo">DoaMais</h1>
+        
+        <div class="search-bar-desktop">
+            <input type="text" id="search-input" placeholder="Buscar por item, categoria ou local..." oninput="filterDonations()">
+        </div>
+        
+        <nav class="nav-links">
+            <a href="profile.html" class="nav-item">Meu Perfil</a>
+            <a href="#" id="logout-button" class="nav-item">Sair</a>
+        </nav>
+
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+    </header>
+
+    <div class="search-bar-mobile">
+        <input type="text" id="search-input-mobile" placeholder="Buscar por item, categoria ou local..." oninput="filterDonations()">
+    </div>
+
+    <main class="main-content">
+        <h2>Doações Próximas a Você</h2>
+        <div id="loading-message" class="loading-state">Carregando itens...</div>
+        <section id="donations-container" class="donations-grid"></section>
+    </main>
+
+    <a href="publish.html" class="floating-button" title="Publicar Novo Item">
+        <span class="plus-icon">+</span>
+    </a>
+
+    <script src="assets/js/home.js"></script>
+</body>
+</html>

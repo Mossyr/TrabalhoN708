@@ -1,0 +1,110 @@
+/* ARQUIVO: frontend/web/assets/css/details.css (CORRIGIDO COM ESTILOS PARA BOTÕES) */
+
+:root {
+    --color-primary: #4CAF50;
+    --color-secondary: #2196F3;
+    --color-background: #FAFAFA;
+    --color-text-dark: #333;
+    --color-text-light: #FFF;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+    --border-radius: 12px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background-color: var(--color-secondary);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    color: var(--color-text-light);
+}
+
+.main-header h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.back-link, .nav-item {
+    color: var(--color-text-light); /* Branco pra contrastar */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-link:hover, .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover suave */
+    transform: translateY(-2px);
+}
+
+.details-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.item-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.item-gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.item-info h2 {
+    color: var(--color-primary);
+}
+
+.contact-button {
+    background: var(--color-primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.contact-button:hover {
+    background: #388E3C;
+}
+
+@media (max-width: 768px) {
+    .details-page {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .main-header {
+        padding: 10px;
+    }
+
+    .back-link, .nav-item {
+        padding: 6px 10px;
+    }
+}

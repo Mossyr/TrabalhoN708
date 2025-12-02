@@ -1,0 +1,19 @@
+/* ARQUIVO: frontend/web/assets/css/publish.css */
+
+/* Estilos específicos para a página de Publicação, mantendo a modularidade */
+
+/* Ajuste no campo de arquivo, pois input type="file" tem estilo nativo limitado */
+input[type="file"] {
+    padding: 8px;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #6c757d;
+    font-size: 0.85em;
+}

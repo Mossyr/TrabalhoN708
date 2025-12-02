@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoaMais - Detalhes</title>
+    <link rel="stylesheet" href="assets/css/details.css">
+</head>
+<body>
+    <header class="main-header">
+        <a href="home.html" class="back-link">&lt; Voltar</a>
+        <h1>Detalhes da Doação</h1>
+        <a href="profile.html" class="nav-item">Perfil</a>
+    </header>
+
+    <main class="details-page">
+        <div id="loading-details" class="loading-state">Carregando...</div>
+        <section id="item-details" style="display:none;">
+            <div class="item-gallery" id="item-gallery"></div>
+            <h2 id="detail-title"></h2>
+            <p>Categoria: <span id="detail-category"></span></p>
+            <p>Descrição: <span id="detail-description"></span></p>
+            <p>Localização: <span id="detail-location"></span></p>
+            <div id="map-placeholder" style="height:200px; background:#eee; margin:10px 0;">Mapa aqui (placeholder)</div>
+            <div class="donor-contact">
+                <p>Contato: <span id="detail-contact"></span></p>
+                <a id="detail-contact-link" class="contact-button" target="_blank">Entrar em Contato via WhatsApp</a>
+            </div>
+        </section>
+        <div id="error-message" style="display:none; color:red;"></div>
+    </main>
+    
+    <script src="assets/js/details.js"></script>
+</body>
+</html>
