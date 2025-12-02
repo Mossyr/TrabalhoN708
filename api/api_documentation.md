@@ -14,7 +14,7 @@ A API é acessível em `http://localhost:3000/api/` (ambiente de desenvolvimento
 
 | Rota | Método | Descrição | Acesso |
 | :--- | :--- | :--- | :--- |
-| `/donations` | **POST** | [cite_start]Publica um novo item para doação (requer *multipart/form-data* e autenticação)[cite: 193]. | Protegido (JWT) |
-| `/donations` | **GET** | [cite_start]Lista todas as doações disponíveis (Feed da Home)[cite: 193]. | Público |
+| `/donations` | **POST** | Publica um novo item para doação (requer *multipart/form-data* e autenticação). | Protegido (JWT) |
+| `/donations` | **GET** | Lista todas as doações disponíveis (Feed da Home). | Público |
 | `/donations/my` | **GET** | Retorna a lista de doações criadas pelo usuário logado (Minhas Doações no Perfil). | Protegido (JWT) |
 | `/donations/:id` | **GET** | Retorna os detalhes de uma doação específica. | Público |
