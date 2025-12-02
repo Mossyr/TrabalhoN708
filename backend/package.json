@@ -1,0 +1,36 @@
+{
+  "name": "backend-doamais",
+  "version": "1.0.0",
+  "description": "API REST para o Projeto Aplicado Multiplataforma DoaMais.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --watchAll --silent --detectOpenHandles"
+  },
+
+  "jest": {
+  "testEnvironment": "node"
+},
+  "keywords": [
+    "node",
+    "express",
+    "mongodb"
+  ],
+  "author": "Rangel Amaral Ferreira",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^7.1.4"
+  }
+}

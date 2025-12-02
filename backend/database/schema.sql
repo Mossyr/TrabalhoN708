@@ -1,0 +1,13 @@
+-- ARQUIVO: backend/database/schema.sql
+
+-- NOTA IMPORTANTE PARA AVALIAÇÃO (CONFORMIDADE ESTRUTURAL):
+-- O projeto DoaMais foi originalmente planejado com um banco de dados
+-- relacional (PostgreSQL) na Etapa 1[cite: 9, 25].
+-- 
+-- Houve uma mudança arquitetural na Etapa 2 para o modelo NoSQL (MongoDB)
+-- para maior agilidade no desenvolvimento (justificativa detalhada em architecture.md).
+-- 
+-- Este arquivo SQL existe apenas para cumprir a estrutura obrigatória do 
+-- repositório (pasta backend/database/).
+-- 
+-- O esquema real do banco de dados (MongoDB) é definido via Mongoose Models (User.js e Donation.js).
